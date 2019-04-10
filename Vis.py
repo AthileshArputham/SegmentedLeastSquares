@@ -19,7 +19,7 @@ for point in inp_points:
 plot = figure(plot_width = 400,plot_height = 400)
 plot.circle(x_in,y_in,size = 5,color = 'navy',alpha = 0.5)
 
-cost = Slider(title="Cost", value=0, start=10, end=100, step=1)
+cost = Slider(title="Cost", value=0, start=10, end=1000, step=10)
 x = []
 y = []
 source = ColumnDataSource(data = dict(x = x,y = y))

@@ -1,0 +1,94 @@
+\hypertarget{classSegmentedLeastSquares}{}\section{Segmented\+Least\+Squares Class Reference}
+\label{classSegmentedLeastSquares}\index{Segmented\+Least\+Squares@{Segmented\+Least\+Squares}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classSegmentedLeastSquares_a70bd60ec9de1d4f4c17d10b98d3a4d12}{Segmented\+Least\+Squares} (int c)
+\item 
+vector$<$ pair$<$ pair$<$ double, double $>$, pair$<$ double, double $>$ $>$ $>$ \hyperlink{classSegmentedLeastSquares_af68a3f8b393debbd4926eba0a716cf40}{Least\+Squares} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classSegmentedLeastSquares_a12df4dd57a14e03f0b8a71b32e29d846}\label{classSegmentedLeastSquares_a12df4dd57a14e03f0b8a71b32e29d846}} 
+vector$<$ double $>$ {\bfseries O\+PT}
+\item 
+\mbox{\Hypertarget{classSegmentedLeastSquares_aec34a13c1d6aa54e7d1ef685d827c152}\label{classSegmentedLeastSquares_aec34a13c1d6aa54e7d1ef685d827c152}} 
+double {\bfseries cost}
+\item 
+\mbox{\Hypertarget{classSegmentedLeastSquares_a677b17c1f13a1de71e008cd68c5ee472}\label{classSegmentedLeastSquares_a677b17c1f13a1de71e008cd68c5ee472}} 
+int {\bfseries N}
+\item 
+\mbox{\Hypertarget{classSegmentedLeastSquares_afbe30a8787c849ebc12245cfda0bdb07}\label{classSegmentedLeastSquares_afbe30a8787c849ebc12245cfda0bdb07}} 
+vector$<$ double $>$ {\bfseries x\+\_\+sum}
+\item 
+\mbox{\Hypertarget{classSegmentedLeastSquares_ada881350ce26b8d16b510666431a7fdb}\label{classSegmentedLeastSquares_ada881350ce26b8d16b510666431a7fdb}} 
+vector$<$ double $>$ {\bfseries y\+\_\+sum}
+\item 
+\mbox{\Hypertarget{classSegmentedLeastSquares_a4f085e281d0f9fa4bb546c346ad18861}\label{classSegmentedLeastSquares_a4f085e281d0f9fa4bb546c346ad18861}} 
+vector$<$ double $>$ {\bfseries xy\+\_\+sum}
+\item 
+\mbox{\Hypertarget{classSegmentedLeastSquares_a50306feeaa67c0d16314f315a2e7f60b}\label{classSegmentedLeastSquares_a50306feeaa67c0d16314f315a2e7f60b}} 
+vector$<$ double $>$ {\bfseries xsqr\+\_\+sum}
+\item 
+\mbox{\Hypertarget{classSegmentedLeastSquares_a28c8d41eb4f6945026299f9508c23be4}\label{classSegmentedLeastSquares_a28c8d41eb4f6945026299f9508c23be4}} 
+vector$<$ double $>$ {\bfseries ysqr\+\_\+sum}
+\item 
+\mbox{\Hypertarget{classSegmentedLeastSquares_a826bbb30d16ca69c332561bd666088fd}\label{classSegmentedLeastSquares_a826bbb30d16ca69c332561bd666088fd}} 
+vector$<$ pair$<$ double, double $>$ $>$ {\bfseries points}
+\item 
+\mbox{\Hypertarget{classSegmentedLeastSquares_aee47b1e1728f0d0e1adf21d46f40ca69}\label{classSegmentedLeastSquares_aee47b1e1728f0d0e1adf21d46f40ca69}} 
+vector$<$ vector$<$ double $>$ $>$ {\bfseries error}
+\item 
+\mbox{\Hypertarget{classSegmentedLeastSquares_a6f777c0cd5d64a355ce9b5b56c265152}\label{classSegmentedLeastSquares_a6f777c0cd5d64a355ce9b5b56c265152}} 
+vector$<$ vector$<$ double $>$ $>$ {\bfseries a}
+\item 
+\mbox{\Hypertarget{classSegmentedLeastSquares_aa3ce9b084abe09508a2ac6d8bfc03cfa}\label{classSegmentedLeastSquares_aa3ce9b084abe09508a2ac6d8bfc03cfa}} 
+vector$<$ vector$<$ double $>$ $>$ {\bfseries b}
+\item 
+\mbox{\Hypertarget{classSegmentedLeastSquares_a7909b3938fe2f040c7b295092a8fe0ff}\label{classSegmentedLeastSquares_a7909b3938fe2f040c7b295092a8fe0ff}} 
+vector$<$ int $>$ {\bfseries segments}
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classSegmentedLeastSquares_a3e716cac8bd4276cf7c1a382a40cb283}{Precompute} ()
+\item 
+void \hyperlink{classSegmentedLeastSquares_afeded48faee42484d3b5b82dd166121d}{compute\+Error} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classSegmentedLeastSquares_a70bd60ec9de1d4f4c17d10b98d3a4d12}\label{classSegmentedLeastSquares_a70bd60ec9de1d4f4c17d10b98d3a4d12}} 
+\index{Segmented\+Least\+Squares@{Segmented\+Least\+Squares}!Segmented\+Least\+Squares@{Segmented\+Least\+Squares}}
+\index{Segmented\+Least\+Squares@{Segmented\+Least\+Squares}!Segmented\+Least\+Squares@{Segmented\+Least\+Squares}}
+\subsubsection{\texorpdfstring{Segmented\+Least\+Squares()}{SegmentedLeastSquares()}}
+{\footnotesize\ttfamily Segmented\+Least\+Squares\+::\+Segmented\+Least\+Squares (\begin{DoxyParamCaption}\item[{int}]{c }\end{DoxyParamCaption})}
+
+\textquotesingle{}c\textquotesingle{} is the cost of using a new line to fit the data 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classSegmentedLeastSquares_afeded48faee42484d3b5b82dd166121d}\label{classSegmentedLeastSquares_afeded48faee42484d3b5b82dd166121d}} 
+\index{Segmented\+Least\+Squares@{Segmented\+Least\+Squares}!compute\+Error@{compute\+Error}}
+\index{compute\+Error@{compute\+Error}!Segmented\+Least\+Squares@{Segmented\+Least\+Squares}}
+\subsubsection{\texorpdfstring{compute\+Error()}{computeError()}}
+{\footnotesize\ttfamily void Segmented\+Least\+Squares\+::compute\+Error (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Function that computes and stores the error that every possible lines produces \mbox{\Hypertarget{classSegmentedLeastSquares_af68a3f8b393debbd4926eba0a716cf40}\label{classSegmentedLeastSquares_af68a3f8b393debbd4926eba0a716cf40}} 
+\index{Segmented\+Least\+Squares@{Segmented\+Least\+Squares}!Least\+Squares@{Least\+Squares}}
+\index{Least\+Squares@{Least\+Squares}!Segmented\+Least\+Squares@{Segmented\+Least\+Squares}}
+\subsubsection{\texorpdfstring{Least\+Squares()}{LeastSquares()}}
+{\footnotesize\ttfamily vector$<$ pair$<$ pair$<$ double, double $>$, pair$<$ double, double $>$ $>$ $>$ Segmented\+Least\+Squares\+::\+Least\+Squares (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Function that returns pairs if points. Here each pair denotes the end points of the lines used to fit the data \mbox{\Hypertarget{classSegmentedLeastSquares_a3e716cac8bd4276cf7c1a382a40cb283}\label{classSegmentedLeastSquares_a3e716cac8bd4276cf7c1a382a40cb283}} 
+\index{Segmented\+Least\+Squares@{Segmented\+Least\+Squares}!Precompute@{Precompute}}
+\index{Precompute@{Precompute}!Segmented\+Least\+Squares@{Segmented\+Least\+Squares}}
+\subsubsection{\texorpdfstring{Precompute()}{Precompute()}}
+{\footnotesize\ttfamily void Segmented\+Least\+Squares\+::\+Precompute (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Function to precompute required values,and stores the following values x\+\_\+sum,y\+\_\+sum,xy\+\_\+sum,xsqr\+\_\+sum,ysqr\+\_\+sum 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Segmented\+Least\+Squares.\+h\item 
+Segmented\+Least\+Squares.\+cpp\end{DoxyCompactItemize}
