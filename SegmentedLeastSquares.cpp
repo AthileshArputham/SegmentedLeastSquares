@@ -17,7 +17,7 @@ SegmentedLeastSquares::SegmentedLeastSquares(int c){
 		error.push_back(vector<double>());
 		segments.push_back(0);
 		for(int j = 0;j<N;j++){
-			error[i].push_back(0);
+			error[i].push_back(numeric_limits<double>::infinity());
 			a[i].push_back(0);
 			b[i].push_back(0);
 		}
@@ -93,6 +93,9 @@ vector<pair<pair<double,double>,pair<double,double>>> SegmentedLeastSquares::Lea
 
 		}
 		OPT.push_back(minimum_cost);
+		// cout<<"*****************";
+		// cout<<OPT.back();
+		// cout<<"*****************";
 		segments[j] = start_point;
 
 	}
