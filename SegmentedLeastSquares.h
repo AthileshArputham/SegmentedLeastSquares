@@ -18,7 +18,7 @@ class SegmentedLeastSquares{
 		* Function that returns pairs if points.
 		* Here each pair denotes the end points of the lines used to fit the data
 		*/
-		vector<pair<pair<double,double>,pair<double,double>>> LeastSquares();
+		pair<vector<pair<pair<double,double>,pair<double,double>>>,double> LeastSquares();
 	private:
 		/*! 
 		* Function to precompute required values,and stores the following values x_sum,y_sum,xy_sum,xsqr_sum,ysqr_sum
