@@ -76,6 +76,13 @@ void SegmentedLeastSquares::computeError(){
 }
 
 pair<vector<pair<pair<double,double>,pair<double,double>>>,double> SegmentedLeastSquares::LeastSquares(){
+	if(cost==0)
+	{
+ 		vector<pair<pair<double,double>,pair<double,double>>> answer;
+ 		for(int i=0; i<points.size()-1; i++)
+ 			answer.push_back({points[i],points[i+1]});
+ 		return {answer,0};
+	}
 	int i,j;
 	for(j = 1;j <= N;j++){
 		double minimum_cost = numeric_limits<double>::infinity();

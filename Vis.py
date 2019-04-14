@@ -19,7 +19,7 @@ for point in inp_points:
 plot = figure(plot_width = 400,plot_height = 400)
 plot.circle(x_in,y_in,size = 5,color = 'navy',alpha = 0.5)
 
-cost = Slider(title="Cost", value=0, start=0, end=20, step=1)
+cost = Slider(title="Cost", value=0, start=0, end=100, step=1)
 x = []
 y = []
 source = ColumnDataSource(data = dict(x = x,y = y))
@@ -34,7 +34,7 @@ def update_data(attrname, old, new):
     x = []
     y = []
     i = 0
-    out_points = np.loadtxt('out.txt')
+    out_points = np.loadtxt('out.txt',skiprows=1)
     if out_points.size != 4:
         for point in out_points:
             x.append(point[0])
