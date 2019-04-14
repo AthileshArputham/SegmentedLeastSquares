@@ -2,7 +2,7 @@ import numpy as np
 from bokeh.io import curdoc
 from bokeh.layouts import row, column
 from bokeh.models import ColumnDataSource
-from bokeh.models.widgets import Slider, TextInput
+from bokeh.models.widgets import Slider, TextInput, Div
 from bokeh.plotting import figure
 import os
 import sys
@@ -20,6 +20,8 @@ plot = figure(plot_width = 400,plot_height = 400)
 plot.circle(x_in,y_in,size = 5,color = 'navy',alpha = 0.5)
 
 cost = Slider(title="Cost", value=0, start=0, end=100, step=1)
+button_1 = Div(text="""Output : """,
+width=200, height=100)
 x = []
 y = []
 source = ColumnDataSource(data = dict(x = x,y = y))
@@ -53,10 +55,14 @@ def update_data(attrname, old, new):
                 y.append(point)
             i += 1
     source.data = dict(x=x, y=y)
+    output = "<b>Output:</b> <p>"
+    with open("out.txt","r") as f:
+    	output+= f.readline()
+    	button_1.text = output
 
 cost.on_change('value', update_data)
 
 
-inputs = column(cost)
+inputs = column(cost,button_1)
 curdoc().add_root(row(inputs, plot, width=800))
-curdoc().title = "Sliders"
+curdoc().title = "Curve fitting"
