@@ -28,7 +28,6 @@ SegmentedLeastSquares::SegmentedLeastSquares(int c){
 	xy_sum.push_back(0.0);
 	xsqr_sum.push_back(0.0);
 	ysqr_sum.push_back(0.0);
-	OPT.push_back(0.0);
 	cost = c;
 	sort(points.begin(),points.end());
 	Precompute();

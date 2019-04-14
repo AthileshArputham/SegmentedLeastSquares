@@ -3,7 +3,7 @@ using namespace std;
 
 class SegmentedLeastSquares{
 	public:
-		vector<double> OPT;
+		double OPT[10000]={0};
 		double cost;
 		int N;
 		vector <double> x_sum,y_sum,xy_sum,xsqr_sum,ysqr_sum;

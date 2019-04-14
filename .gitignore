@@ -2,3 +2,4 @@ a.out
 SegmentedLeastSquares.o
 main.o
 benchmark.cpp
+out.txt
